@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<style>
+  /* Remove the navbar's default margin-bottom and rounded borders */
+  .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+  }
+  </style>
+<div style="text-align:center">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"> Welcome to {{ title }}</a>
+      </div>
+     
+          <ul class="nav navbar-nav">
+          <li> <a [routerLink] = "['/search']"><strong>Search</strong></a></li>
+          <li> <a [routerLink] = "['/saved']"><strong>Retrieve</strong></a></li>
+        </ul>
+      
+     
+    </div>
+  </nav>
+
+
+  <div class="container-fluid" style="padding:20px">
+
+      <router-outlet></router-outlet>
+  </div>

@@ -1,0 +1,24 @@
+
+<form class="form-inline" #searchForm="ngForm" (ngSubmit)="processSearch()">
+
+  <label>Username</label>
+  <input class="form-control" type="text" name="username" 
+  placeholder="Enter your name" required ngModel>
+
+  <label>Search</label>
+  <input class="form-control" type="text" name="query" size="50" 
+  placeholder="Search by" required ngModel>
+
+  <button class="btn btn-success" type="submit" [disabled]="searchForm.invalid">
+    Search
+  </button>
+
+</form>
+<div *ngIf="basket.length <= 0">
+  <img src="http://78.media.tumblr.com/365c6cd618ea9a55b9639de4c969e85b/tumblr_ngsjr97fWj1s5e5bko1_500.gif" width="600px">
+</div>
+<div *ngIf="basket.length > 0">
+  <app-searchresult [contents]="basket">
+  </app-searchresult>
+</div>
+
